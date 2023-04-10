@@ -1,0 +1,158 @@
+@use './variable' as *;
+.header {
+    // position: sticky;
+    // top: 0;
+    // z-index: 1000;
+    .header-top {
+        background-color: $header-color;
+        color: $text-white;
+        text-transform: capitalize;
+        font-size: 13px;
+        height: 40px;
+        border-bottom: 1px solid $header-sub-color;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            line-height: 40px;
+            .header-top-right {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                p {
+                    margin-right: 30px;
+                    text-align: center;
+                    svg {
+                        font-size: 10px;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    .header-bottom {
+        background-color: $header-color;
+        color: $text-white;
+        text-transform: capitalize;
+        padding: 25px;
+        //height: 60px;
+        .container {
+            //line-height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .header-bottom-logo {
+                font-size: 25px;
+                h2 {
+                    color: orange;
+                }
+                label {
+                    color: $text-white;
+                }
+            }
+            .header-bottom-search {
+                align-items: center;
+                display: flex;
+                height: 30px;
+                width: 500px;
+                background-color: $text-white;
+                border-radius: 5px;
+                input {
+                    border: none;
+                    margin-left: 20px;
+                    width: 100%;
+                    outline: none;
+                    color: $text-gray;
+                }
+                button {
+                    background: none;
+                    border: none;
+                    width: 50px;
+                    height: 30px;
+                    background-color: orange;
+                    border-bottom-right-radius: 5px;
+                    border-top-right-radius: 5px;
+                    cursor: pointer;
+                }
+            }
+            .header-bottom-links {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 25px;
+                a {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    img {
+                        height: 30px;
+                        width: 30px;
+                    }
+                    p {
+                        font-size: 13px;
+                    }
+                    .count {
+                        display: grid;
+                        //flex-direction: column;
+                        gap: 5px;
+                        .amount {
+                            font-size: 13px;
+                            background-color: $text-white;
+                            color: black;
+                            text-align: center;
+                            width: 15px;
+                            border-radius: 50%;
+                            align-items: center;
+                            text-align: center;
+                            margin: 0 auto;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .header-menu {
+        background-color: $header-menu;
+        color: $text-white;
+        .container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            .dropdown {
+                width: 300px;
+                //background-color: $text-white;
+                color: $text-white;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 10px 0;
+                text-transform: uppercase;
+                font-size: 15px;
+                border-right: 1px solid $header-sub-color;
+                img {
+                    height: 20px;
+                    width: 20px;
+                    flex: 0;
+                    margin-right: 15px;
+                }
+                .select {
+                    flex: 1;
+                }
+                svg {
+                    font-size: 10px;
+                    font-weight: bold;
+                    margin-right: 10px;
+                }
+            }
+            .menu {
+                text-transform: uppercase;
+                a {
+                    margin: 0 20px;
+                }
+            }
+            .active_menu {
+                color: orange;
+            }
+        }
+    }
+}

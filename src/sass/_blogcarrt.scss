@@ -1,0 +1,30 @@
+@use './variable' as *;
+.blog-card {
+    border-radius: 15px;
+    overflow: hidden;
+    cursor: pointer;
+    .card-img {
+        object-fit: cover;
+        border-radius: 10px;
+    }
+    .content {
+        background: $text-white;
+        margin-top: -5px;
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+        .button {
+            background: $header-menu;
+            color: $text-white;
+            width: 100px;
+            height: 30px;
+            align-items: center;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+            border-radius: 20px;
+            font-size: 10px;
+        }
+    }
+}
